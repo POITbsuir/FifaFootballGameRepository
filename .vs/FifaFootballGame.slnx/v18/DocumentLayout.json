@@ -1,0 +1,462 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\multigameplayer\\multigamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:multigameplayer\\multigamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\multigameplayer\\multigamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:multigameplayer\\multigamewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\forward.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\forward.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\midfielder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\midfielder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\aifootballagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\aifootballagent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\footballplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\footballplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\goalkeeper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\goalkeeper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\service\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:service\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\ball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\singleplayer\\singlegamewindow\\gamewindowfolder\\gamefolder\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:singleplayer\\singlegamewindow\\gamewindowfolder\\gamefolder\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\enemyfootball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\enemyfootball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\service\\matchstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:service\\matchstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\defender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\defender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\enemyteamai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\enemyteamai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\service\\gameclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:service\\gameclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\singleplayer\\singlegamewindow\\gamewindowfolder\\gamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:singleplayer\\singlegamewindow\\gamewindowfolder\\gamewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\service\\playerinputpacket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:service\\playerinputpacket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\viewmodels\\applicationmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:viewmodels\\applicationmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\gamepresentwindowfolder\\presentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\gamepresentwindowfolder\\presentwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\data\\frontend\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:data\\frontend\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\service\\appcommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:service\\appcommands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\models\\gamepresentwindowfolder\\presentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:models\\gamepresentwindowfolder\\presentwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|c:\\users\\\u043A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\desktop\\fifagame\\fifagame\\fifastartwindow\\fifafootballgame\\viewmodels\\applicationpresent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1D45386-55DD-DFF5-FFD6-3D01B9531BF8}|FifaFootballGame.csproj|solutionrelative:viewmodels\\applicationpresent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\SinglePlayer\\SingleGameWindow\\GameWindowFolder\\GameFolder\\Game.cs",
+              "RelativeDocumentMoniker": "SinglePlayer\\SingleGameWindow\\GameWindowFolder\\GameFolder\\Game.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\SinglePlayer\\SingleGameWindow\\GameWindowFolder\\GameFolder\\Game.cs",
+              "RelativeToolTip": "SinglePlayer\\SingleGameWindow\\GameWindowFolder\\GameFolder\\Game.cs",
+              "ViewState": "AgIAALEBAAAAAAAAAAAuwMIBAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T20:31:10.087Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AIFootballAgent.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\AIFootballAgent.cs",
+              "RelativeDocumentMoniker": "Models\\AIFootballAgent.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\AIFootballAgent.cs",
+              "RelativeToolTip": "Models\\AIFootballAgent.cs",
+              "ViewState": "AgIAAMcBAAAAAAAAAAAQwEcBAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T21:07:16.168Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FootballPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\FootballPlayer.cs",
+              "RelativeDocumentMoniker": "Models\\FootballPlayer.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\FootballPlayer.cs",
+              "RelativeToolTip": "Models\\FootballPlayer.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAqwIIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T21:06:33.378Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Ball.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Ball.cs",
+              "RelativeDocumentMoniker": "Models\\Ball.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Ball.cs",
+              "RelativeToolTip": "Models\\Ball.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T22:22:28.399Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MultigameWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\MultiGamePlayer\\MultigameWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MultiGamePlayer\\MultigameWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\MultiGamePlayer\\MultigameWindow.xaml.cs",
+              "RelativeToolTip": "MultiGamePlayer\\MultigameWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-26T07:27:50.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MultigameWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\MultiGamePlayer\\MultigameWindow.xaml",
+              "RelativeDocumentMoniker": "MultiGamePlayer\\MultigameWindow.xaml",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\MultiGamePlayer\\MultigameWindow.xaml",
+              "RelativeToolTip": "MultiGamePlayer\\MultigameWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-26T07:24:46.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Midfielder.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Midfielder.cs",
+              "RelativeDocumentMoniker": "Models\\Midfielder.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Midfielder.cs",
+              "RelativeToolTip": "Models\\Midfielder.cs",
+              "ViewState": "AgIAANUAAAAAAAAAAAAwwMsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T16:24:51.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Forward.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Forward.cs",
+              "RelativeDocumentMoniker": "Models\\Forward.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Forward.cs",
+              "RelativeToolTip": "Models\\Forward.cs",
+              "ViewState": "AgIAANUAAAAAAAAAAAAgwOYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T18:37:51.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Goalkeeper.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Goalkeeper.cs",
+              "RelativeDocumentMoniker": "Models\\Goalkeeper.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Goalkeeper.cs",
+              "RelativeToolTip": "Models\\Goalkeeper.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T13:58:04.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-22T11:38:51.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameLogic.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\GameLogic.cs",
+              "RelativeDocumentMoniker": "Service\\GameLogic.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\GameLogic.cs",
+              "RelativeToolTip": "Service\\GameLogic.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAA9wFsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T19:10:55.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EnemyFootball.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\EnemyFootball.cs",
+              "RelativeDocumentMoniker": "Models\\EnemyFootball.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\EnemyFootball.cs",
+              "RelativeToolTip": "Models\\EnemyFootball.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwC8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T19:17:43.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MatchState.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\MatchState.cs",
+              "RelativeDocumentMoniker": "Service\\MatchState.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\MatchState.cs",
+              "RelativeToolTip": "Service\\MatchState.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwEYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T19:15:22.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Defender.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Defender.cs",
+              "RelativeDocumentMoniker": "Models\\Defender.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\Defender.cs",
+              "RelativeToolTip": "Models\\Defender.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAkwHUAAAByAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T22:21:45.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EnemyTeamAI.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\EnemyTeamAI.cs",
+              "RelativeDocumentMoniker": "Models\\EnemyTeamAI.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\EnemyTeamAI.cs",
+              "RelativeToolTip": "Models\\EnemyTeamAI.cs",
+              "ViewState": "AgIAAJIBAAAAAAAAAAAowLABAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T18:31:59.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GameClient.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\GameClient.cs",
+              "RelativeDocumentMoniker": "Service\\GameClient.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\GameClient.cs",
+              "RelativeToolTip": "Service\\GameClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T13:26:20.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GameWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\SinglePlayer\\SingleGameWindow\\GameWindowFolder\\GameWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SinglePlayer\\SingleGameWindow\\GameWindowFolder\\GameWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\SinglePlayer\\SingleGameWindow\\GameWindowFolder\\GameWindow.xaml.cs",
+              "RelativeToolTip": "SinglePlayer\\SingleGameWindow\\GameWindowFolder\\GameWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwC8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T13:27:00.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T13:27:08.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PlayerInputPacket.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\PlayerInputPacket.cs",
+              "RelativeDocumentMoniker": "Service\\PlayerInputPacket.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\PlayerInputPacket.cs",
+              "RelativeToolTip": "Service\\PlayerInputPacket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T13:26:46.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{93c5e7ad-af06-49e6-a756-b8f3eaca790d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ApplicationMain.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\ViewModels\\ApplicationMain.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ApplicationMain.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\ViewModels\\ApplicationMain.cs",
+              "RelativeToolTip": "ViewModels\\ApplicationMain.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T12:07:53.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PresentWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\GamePresentWindowFolder\\PresentWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Models\\GamePresentWindowFolder\\PresentWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\GamePresentWindowFolder\\PresentWindow.xaml.cs",
+              "RelativeToolTip": "Models\\GamePresentWindowFolder\\PresentWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T21:08:46.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Data\\Frontend\\index.html",
+              "RelativeDocumentMoniker": "Data\\Frontend\\index.html",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Data\\Frontend\\index.html",
+              "RelativeToolTip": "Data\\Frontend\\index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-05-15T16:52:33.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AppCommands.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\AppCommands.cs",
+              "RelativeDocumentMoniker": "Service\\AppCommands.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Service\\AppCommands.cs",
+              "RelativeToolTip": "Service\\AppCommands.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-28T22:06:58.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PresentWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\GamePresentWindowFolder\\PresentWindow.xaml",
+              "RelativeDocumentMoniker": "Models\\GamePresentWindowFolder\\PresentWindow.xaml",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\Models\\GamePresentWindowFolder\\PresentWindow.xaml",
+              "RelativeToolTip": "Models\\GamePresentWindowFolder\\PresentWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-28T22:03:22.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ApplicationPresent.cs",
+              "DocumentMoniker": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\ViewModels\\ApplicationPresent.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ApplicationPresent.cs",
+              "ToolTip": "C:\\Users\\\u041A\u043E\u043D\u0441\u0442\u0430\u043D\u0442\u0438\u043D\\Desktop\\FifaGame\\FifaGame\\FifaStartWindow\\FifaFootballGame\\ViewModels\\ApplicationPresent.cs",
+              "RelativeToolTip": "ViewModels\\ApplicationPresent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T21:08:33.308Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

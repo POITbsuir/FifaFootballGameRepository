@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\Frontend\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.WpfInterop" Version="1.9.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Data\Frontend\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
