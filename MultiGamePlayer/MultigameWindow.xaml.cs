@@ -22,20 +22,13 @@ namespace FifaFootballGame.MultiGamePlayer
 
                 GameWindow gameWindow = new GameWindow(server);
                 gameWindow.Show();
+
+                Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            catch 
-            {
-                throw new Exception();
-            }
-            finally
-            {
-                Close();
-            }
-
         }
 
         private async void ConnectButton_Click(object sender, RoutedEventArgs e)
@@ -43,7 +36,11 @@ namespace FifaFootballGame.MultiGamePlayer
             try
             {
                 if (IpTextBox.Text == "" || PortTextBox.Text == "")
+                {
                     MessageBox.Show("Поля не должны быть пустыми...");
+                    return;
+                }
+
                 string ip = IpTextBox.Text;
                 int port = int.Parse(PortTextBox.Text);
 
@@ -52,18 +49,12 @@ namespace FifaFootballGame.MultiGamePlayer
 
                 GameWindow gameWindow = new GameWindow(client);
                 gameWindow.Show();
+
+                Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            catch
-            {
-                throw new Exception();
-            }
-            finally
-            { 
-                Close(); 
             }
         }
         private void IpTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)

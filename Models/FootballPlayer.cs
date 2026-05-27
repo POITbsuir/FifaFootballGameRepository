@@ -239,5 +239,12 @@ namespace FifaFootballGame.Models
         public int GetValueDribling() => _dribling;
         public int GetValueSpeed() => _speed;
         public int GetValueHeadingGame() => _headingGame;
+        //метод для получения позиции при сервреной игре
+        public void SetNetworkPosition(Vector2 position)
+        {
+            _currentPointFootballPlayer = position;
+        }
     }
+
+
 }

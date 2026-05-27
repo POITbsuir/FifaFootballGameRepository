@@ -12,13 +12,18 @@ namespace FifaFootballGame.Data
     {
         public bool isActive;
 
-        public SecondFootballPlayer(Texture2D texture, Vector2 currentPositionAI, Ball ball, string position) : base(texture, currentPositionAI, ball, position)
+        public SecondFootballPlayer(Texture2D texture, Vector2 currentPositionAI, Ball ball, string position)
+    : base(texture, currentPositionAI, ball, position)
         {
             _textureAI = texture;
             _ball = ball;
             _currentPositionAI = currentPositionAI;
             _isControlBall = false;
             _position = position;
+
+            _speed = 4;
+            _dribling = 85;
+            _headingGame = 75;
         }
         //реализация движение ai-агентов 
         public new void MoveAI(WpfKeyboard keyboard)
@@ -45,7 +50,7 @@ namespace FifaFootballGame.Data
                     move.Value();
         }
 
-        public void MoveFromNetwork(PlayerInputPacket input)
+        public void MoveFromNetwork(PlayerInputPacket input, int width, int height)
         {
             if (!isActive)
                 return;
@@ -61,6 +66,9 @@ namespace FifaFootballGame.Data
 
             if (input.D)
                 _currentPositionAI.X += _speed;
+            //границы, чтобы второй игрок не выходил за пределы поля
+            _currentPositionAI.X = MathHelper.Clamp(_currentPositionAI.X, 0, width - 32);
+            _currentPositionAI.Y = MathHelper.Clamp(_currentPositionAI.Y, 0, height - 32);
         }
 
     }
