@@ -18,7 +18,7 @@ namespace FifaFootballGame.Models
         private bool _isPassing;
         private bool _isShooting;
 
-        private float _passSpeed = 6f;
+        private float _passSpeed = 16f; //изменить на 6f
 
         private Vector2 _shootDirection;
         private float _shootSpeed;
@@ -176,17 +176,18 @@ namespace FifaFootballGame.Models
                 _positionBall += direction * _passSpeed;
                 return;
             }
-
+            //тут удар 
             if (_isShooting)
             {
                 _positionBall += _shootDirection * _shootSpeed;
-                _shootSpeed *= 0.96f;
+                _shootSpeed *= 0.98f;
 
                 if (_shootSpeed < 0.4f)
                     _isShooting = false;
             }
 
-            ClampToField();
+            //ClampToField();
+            ClampOnlyY();
         }
         //метод возвращаюсщий позицию
         public void SetPosition(Vector2 position)
@@ -197,6 +198,11 @@ namespace FifaFootballGame.Models
         private void ClampToField()
         {
             _positionBall.X = MathHelper.Clamp(_positionBall.X, _radiusBall, _windowWidth - _radiusBall);
+            _positionBall.Y = MathHelper.Clamp(_positionBall.Y, _radiusBall, _windowHeight - _radiusBall);
+        }
+        //метод используемый для оценки удара
+        private void ClampOnlyY()
+        {
             _positionBall.Y = MathHelper.Clamp(_positionBall.Y, _radiusBall, _windowHeight - _radiusBall);
         }
     }

@@ -53,17 +53,20 @@ namespace FifaFootballGame.Service
 
             bool inGoalY = ball.Y >= 240 && ball.Y <= 360;
 
-            if (ball.X <= 0 && inGoalY)
+            if (ball.X <= 5 && inGoalY)
             {
                 _matchState.EnemyScore++;
                 LastGoalForPlayer = false;
                 ResetAfterGoal("Гол противника!");
+                return;
             }
-            else if (ball.X >= _width && inGoalY)
+
+            if (ball.X >= _width - 5 && inGoalY)
             {
                 _matchState.PlayerScore++;
                 LastGoalForPlayer = true;
                 ResetAfterGoal("Гол!");
+                return;
             }
         }
 
