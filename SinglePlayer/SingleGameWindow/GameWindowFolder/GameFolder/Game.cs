@@ -176,30 +176,68 @@ namespace FifaFootballGame.Models.GamePresentWindowFolder.GameFolder
 
         protected override void Update(GameTime gameTime)
         {
-            //если кто-то из команды владеет мячом, то команде присваивается значение владения мячом
-            if (_footballPlayers.Any(p => p.IsControllBall == true))
-            {
-                foreach (var player in _footballPlayers)
-                    player.IsControllBallTeam = true;
-            }
-                
             if (_keyboard == null || _gameBall == null)
             {
                 base.Update(gameTime);
                 return;
             }
 
-            // Если это клиент, он только отправляет нажатия на сервер.
-            // Сам игру не считает.
+            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            // CLIENT: только отправляет кнопки и применяет состояние с сервера
             if (_isClientGame && _gameClient != null)
             {
                 SendClientInput();
+
+                if (_gameClient.LastState != null)
+                    ApplyGameState(_gameClient.LastState);
+
                 base.Update(gameTime);
                 return;
             }
 
-            CalculateDistanceAllPlayers();
+            // SERVER: сообщение один раз при подключении второго игрока
+            if (_isServerGame && _gameServer != null)
+            {
+                if (_gameServer.IsClientConnected && !_gameServer.ConnectionMessageShown)
+                {
+                    _gameServer.ConnectionMessageShown = true;
+                    System.Windows.MessageBox.Show("Второй игрок подключился!");
+                }
+            }
 
+            // Пауза после гола / аута
+            if (_matchState != null && _matchState.IsPausedAfterEvent)
+            {
+                _gameLogic.Update(deltaTime);
+
+                if (_gameLogic.NeedResetPositions)
+                    ResetAllPlayersToStart();
+
+                SendServerStateIfNeeded();
+
+                base.Update(gameTime);
+                return;
+            }
+
+            // Развод мяча
+            if (_matchState != null && _matchState.IsKickOff)
+            {
+                HandleKickOff();
+
+                SendServerStateIfNeeded();
+
+                base.Update(gameTime);
+                return;
+            }
+
+            // Флаг владения команды
+            bool playerTeamHasBall = _footballPlayers.Any(p => p.IsControllBall);
+
+            foreach (var player in _footballPlayers)
+                player.IsControllBallTeam = playerTeamHasBall;
+
+            CalculateDistanceAllPlayers();
             MouseClick(_mouse);
 
             var keyboardState = _keyboard.GetState();
@@ -207,19 +245,18 @@ namespace FifaFootballGame.Models.GamePresentWindowFolder.GameFolder
             bool isPassPressed = keyboardState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.P);
 
             if (isPassPressed && !_wasPassPressed)
-            {
                 PassToNearestPlayer();
-            }
+
             _wasPassPressed = isPassPressed;
+
             bool isShootPressed = keyboardState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Space);
 
             if (isShootPressed && !_wasShootPressed)
-            {
                 ShootToGoal();
-            }
 
             _wasShootPressed = isShootPressed;
-            // Движение твоей команды
+
+            // Движение команды первого игрока
             TeamTacticContext playerContext = _playerTeamAI.BuildContext(_windowWidth, _windowHeight);
 
             foreach (var player in _footballPlayers)
@@ -230,16 +267,25 @@ namespace FifaFootballGame.Models.GamePresentWindowFolder.GameFolder
                 player.MoveCurrentPlayer(_keyboard);
             }
 
-
-            // Если это серверная игра, двигаем второго игрока по данным клиента
+            // Движение команды второго игрока / AI
             if (_isServerGame && _gameServer != null)
             {
-                var input = _gameServer.LastInput;
+                PlayerInputPacket input = _gameServer.LastInput;
 
                 if (_aiForward is SecondFootballPlayer secondPlayer)
                 {
                     secondPlayer.isActive = true;
-                    secondPlayer.MoveFromNetwork(input);
+                    secondPlayer.MoveFromNetwork(input, _windowWidth, _windowHeight);
+                }
+
+                _enemyTeamAI.Update(_windowWidth, _windowHeight);
+
+                foreach (var ai in _aiFootballAgents)
+                {
+                    if (ai == _aiForward)
+                        continue;
+
+                    ai.MoveAI(_windowWidth, _windowHeight, _footballPlayers, _aiFootballAgents);
                 }
             }
             else
@@ -247,49 +293,36 @@ namespace FifaFootballGame.Models.GamePresentWindowFolder.GameFolder
                 _enemyTeamAI.Update(_windowWidth, _windowHeight);
 
                 foreach (var ai in _aiFootballAgents)
-                {
                     ai.MoveAI(_windowWidth, _windowHeight, _footballPlayers, _aiFootballAgents);
-                }
             }
-            
+
             PickBall();
             ResolveBallPlayerCollisions();
+
+            TryPlayerTackle();
 
             _gameBall.Update();
 
             MoveReferi(_keyboard);
 
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             _gameLogic.Update(deltaTime);
 
             if (_gameLogic.NeedResetPositions)
-            {
                 ResetAllPlayersToStart();
-            }
 
-            //возможно удалю потом
-            if (_matchState != null && _matchState.IsPausedAfterEvent)
-            {
-                deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-                _gameLogic.Update(deltaTime);
-
-                if (_gameLogic.NeedResetPositions)
-                    ResetAllPlayersToStart();
-
-                base.Update(gameTime);
-                return;
-            }
-            //развожим мяч
-            if (_matchState != null && _matchState.IsKickOff)
-            {
-                HandleKickOff();
-                base.Update(gameTime);
-                return;
-            }
+            SendServerStateIfNeeded();
 
             base.Update(gameTime);
         }
 
+        private void SendServerStateIfNeeded()
+        {
+            if (_isServerGame && _gameServer != null && _gameServer.IsClientConnected)
+            {
+                _ = _gameServer.SendStateAsync(BuildGameState());
+            }
+        }
+        //---------------------------------------------------------------------------------------------
         //сервеная логика основная ПОДКЛЮЧЕНИЕ КЛИЕНТА 
         private async void SendClientInput()
         {
@@ -307,6 +340,64 @@ namespace FifaFootballGame.Models.GamePresentWindowFolder.GameFolder
 
             await _gameClient.SendInputAsync(input);
         }
+        //метод для получения и передачи пакета данных при сервреной игре
+        private GameStatePacket BuildGameState()
+        {
+            return new GameStatePacket
+            {
+                BallX = _gameBall.GetPositionBall().X,
+                BallY = _gameBall.GetPositionBall().Y,
+
+                ForwardX = _forward.Position().X,
+                ForwardY = _forward.Position().Y,
+
+                LeftMidX = _leftMidfielder.GetPosition().X,
+                LeftMidY = _leftMidfielder.GetPosition().Y,
+
+                RightMidX = _rightMidfielder.GetPosition().X,
+                RightMidY = _rightMidfielder.GetPosition().Y,
+
+                DefenderX = _defender.GetPosition().X,
+                DefenderY = _defender.GetPosition().Y,
+
+                AiForwardX = _aiForward.Position().X,
+                AiForwardY = _aiForward.Position().Y,
+
+                AiLeftMidX = _aiLMidfielder.Position().X,
+                AiLeftMidY = _aiLMidfielder.Position().Y,
+
+                AiRightMidX = _aiRMidfielder.Position().X,
+                AiRightMidY = _aiRMidfielder.Position().Y,
+
+                AiDefenderX = _aiDefender.Position().X,
+                AiDefenderY = _aiDefender.Position().Y,
+
+                AiGoalkeeperX = _aiGoalkeeper.Position().X,
+                AiGoalkeeperY = _aiGoalkeeper.Position().Y
+            };
+        }
+
+        private void ApplyGameState(GameStatePacket state)
+        {
+            if (state == null)
+                return;
+
+            _gameBall.SetPosition(new Vector2(state.BallX, state.BallY));
+
+            _forward.SetNetworkPosition(new Vector2(state.ForwardX, state.ForwardY));
+            _leftMidfielder.SetNetworkPosition(new Vector2(state.LeftMidX, state.LeftMidY));
+            _rightMidfielder.SetNetworkPosition(new Vector2(state.RightMidX, state.RightMidY));
+            _defender.SetNetworkPosition(new Vector2(state.DefenderX, state.DefenderY));
+
+            _aiForward.SetNetworkPosition(new Vector2(state.AiForwardX, state.AiForwardY));
+            _aiLMidfielder.SetNetworkPosition(new Vector2(state.AiLeftMidX, state.AiLeftMidY));
+            _aiRMidfielder.SetNetworkPosition(new Vector2(state.AiRightMidX, state.AiRightMidY));
+            _aiDefender.SetNetworkPosition(new Vector2(state.AiDefenderX, state.AiDefenderY));
+            _aiGoalkeeper.SetNetworkPosition(new Vector2(state.AiGoalkeeperX, state.AiGoalkeeperY));
+        }
+
+
+        //---------------------------------------------------------------------------------------------
         //метод развода мяча
         private void HandleKickOff()
         {
@@ -637,7 +728,7 @@ namespace FifaFootballGame.Models.GamePresentWindowFolder.GameFolder
 
             _gameBall.Shoot(direction, 10f);
         }
-
+        //метод, отвечающий за движение рефери
         private void MoveReferi(WpfKeyboard keyboard)
         {
             
@@ -664,6 +755,45 @@ namespace FifaFootballGame.Models.GamePresentWindowFolder.GameFolder
                 _referiSecondPosition.X -= SPEED_REFERI;
                 if (_referiSecondPosition.X <= 0)
                     _directionReferi = true;
+            }
+        }
+        //метод отвечающий за отбор мяча у противника
+        private void TryPlayerTackle()
+        {
+            if (!_gameBall.IsEnemyOwner())
+                return;
+
+            EnemyFootball enemy = _gameBall.GetEnemyOwner();
+
+            foreach (var player in _footballPlayers)
+            {
+                float distance = Vector2.Distance(
+                    player.GetPosition() + new Vector2(16, 16),
+                    enemy.Position() + new Vector2(16, 16)
+                );
+
+                if (distance < 34)
+                {
+                    int playerPower =
+                        player.GetValueDribling() +
+                        player.GetValueSpeed() +
+                        player.GetValueHeadingGame();
+
+                    int enemyPower =
+                        enemy.GetValueDribling() +
+                        enemy.GetValueSpeed() +
+                        enemy.GetValueHeadingGame();
+
+                    int chance = 35 + (playerPower - enemyPower) / 4;
+                    chance = MathHelper.Clamp(chance, 15, 70);
+
+                    if (new Random().Next(0, 100) < chance)
+                    {
+                        SetActivePlayer(player);
+                        _gameBall.SetOwner(player);
+                        return;
+                    }
+                }
             }
         }
     }

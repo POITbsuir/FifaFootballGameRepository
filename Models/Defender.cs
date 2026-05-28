@@ -15,7 +15,7 @@ namespace FifaFootballGame.Models
         private Vector2 _startPosition;
 
         private Vector2 _smoothTargetPosition;
-        private const float TARGET_DEAD_ZONE = 6f;
+        private const float TARGET_DEAD_ZONE = 6f; //изменить на 6f
         private const float TARGET_SMOOTHING = 0.07f;
 
         public Defender(Texture2D texture, Vector2 startPosition, Ball ball)

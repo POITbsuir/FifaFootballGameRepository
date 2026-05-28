@@ -75,5 +75,10 @@ namespace FifaFootballGame.Models
         public int GetValueSpeed() => _speed;
         public int GetValueHeadingGame() => _headingGame;
         public Vector2 Position() => _currentPositionAI;
+        //метод для получения позиции для сервреной игры нужен (сделать через интерфейс, так как есть и в FootballPlayer)
+        public void SetNetworkPosition(Vector2 position)
+        {
+            _currentPositionAI = position;
+        }
     }
 }

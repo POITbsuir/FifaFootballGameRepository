@@ -3,15 +3,23 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace FifaFootballGame.Models
 {
+    //класс для ии-модели 
     public class AIFootballAgent : EnemyFootball
     {
         private Random _random = new Random();
+
+        //мозг игрока для обучения модели
+        private FootballBrain _brain = new FootballBrain();
 
         private Vector2 _smoothTarget;
         private Vector2 _lastDecisionTarget;
 
         private float _actionCooldown;
         private float _decisionCooldown;
+        private float _learnTimer;
+
+        private AIFeatures _lastFeatures;
+        private AIActionType _lastAction;
 
         private const float TARGET_SMOOTHING = 0.055f;
         private const float TARGET_CHANGE_DEADZONE = 22f;
@@ -25,7 +33,7 @@ namespace FifaFootballGame.Models
             if (position == "forward")
             {
                 _speed = 3;
-                _dribling = 86;
+                _dribling = 88;//88
             }
             else if (position == "goalkeeper")
             {
@@ -35,12 +43,12 @@ namespace FifaFootballGame.Models
             else if (position == "defender")
             {
                 _speed = 2;
-                _dribling = 74;
+                _dribling = 74;//74
             }
             else
             {
                 _speed = 2;
-                _dribling = 82;
+                _dribling = 82;//82
             }
         }
 
@@ -63,6 +71,8 @@ namespace FifaFootballGame.Models
             }
 
             ExecuteTask(width, height, players, enemies);
+
+            _learnTimer++;//для обучения увеличивание шагов
         }
 
         private void ExecuteTask(
@@ -104,6 +114,31 @@ namespace FifaFootballGame.Models
             MoveSmartTo(CurrentTask.Target, width, height);
         }
 
+        private AIFeatures BuildFeatures(int width,int height,List<FootballPlayer> players,List<EnemyFootball> enemies)
+        {
+            Vector2 goal = new Vector2(10, height / 2f);
+            FootballPlayer nearestPlayer = FindNearestPlayer(players);
+
+            float distanceToGoal = Vector2.Distance(Position(), goal) / width;
+            float distanceToNearest = nearestPlayer == null
+                ? 1f
+                : Vector2.Distance(Position(), nearestPlayer.GetPosition()) / width;
+
+            EnemyFootball bestPass = FindBestPassTarget(width, height, players, enemies, out float passScore);
+
+            return new AIFeatures
+            {
+                DistanceToGoal = 1f - MathHelper.Clamp(distanceToGoal, 0f, 1f),
+                DistanceToNearestPlayer = MathHelper.Clamp(distanceToNearest, 0f, 1f),
+                PassLaneSafety = passScore,
+                ForwardProgress = 1f - MathHelper.Clamp(Position().X / width, 0f, 1f),
+                Pressure = MathHelper.Clamp(GetPressure(players, 100f) / 3f, 0f, 1f),
+                TeammateOpenness = passScore,
+                BallX = MathHelper.Clamp(_ball.GetPositionBall().X / width, 0f, 1f),
+                BallY = MathHelper.Clamp(_ball.GetPositionBall().Y / height, 0f, 1f)
+            };
+        }
+
         private void PlayWithBall(
             int width,
             int height,
@@ -116,28 +151,49 @@ namespace FifaFootballGame.Models
                 return;
             }
 
+            AIFeatures features = BuildFeatures(width, height, players, enemies);
+            AIActionType action = _brain.Decide(features);
+
+            _lastFeatures = features;
+            _lastAction = action;
+
             float shootScore = EvaluateShot(width, height, players);
             EnemyFootball bestPass = FindBestPassTarget(width, height, players, enemies, out float passScore);
-            float carryScore = EvaluateCarry(width, height, players);
 
             if (_actionCooldown <= 0)
             {
-                if (shootScore > 0.72f)
+                if ((action == AIActionType.Shoot || shootScore > 0.74f) && shootScore > 0.58f)
                 {
                     ShootAtGoal(width, height);
+                    _brain.Learn(features, AIActionType.Shoot);
                     return;
                 }
 
-                if (bestPass != null && passScore > shootScore && passScore > 0.58f)
+                if ((action == AIActionType.Pass || action == AIActionType.ThroughPass) && bestPass != null && passScore > 0.52f)
                 {
                     PassToRunner(bestPass, width, height);
+                    _brain.Learn(features, AIActionType.Pass);
+                    return;
+                }
+
+                if (GetPressure(players, 85f) > 1.2f && bestPass != null && passScore > 0.45f)
+                {
+                    PassToRunner(bestPass, width, height);
+                    _brain.Learn(features, AIActionType.Pass);
                     return;
                 }
             }
 
             Vector2 carryTarget = GetDribbleTarget(width, height, players);
             MoveSmartTo(carryTarget, width, height);
+
+            if (_learnTimer > 60)
+            {
+                _learnTimer = 0;
+                _brain.Learn(features, AIActionType.Dribble);
+            }
         }
+
 
         private float EvaluateShot(int width, int height, List<FootballPlayer> players)
         {
@@ -169,12 +225,7 @@ namespace FifaFootballGame.Models
             return MathHelper.Clamp(score, 0f, 1f);
         }
 
-        private EnemyFootball FindBestPassTarget(
-            int width,
-            int height,
-            List<FootballPlayer> players,
-            List<EnemyFootball> enemies,
-            out float bestScore)
+        private EnemyFootball FindBestPassTarget(int width,int height,List<FootballPlayer> players,List<EnemyFootball> enemies,out float bestScore)
         {
             EnemyFootball best = null;
             bestScore = 0f;
@@ -458,6 +509,12 @@ namespace FifaFootballGame.Models
             {
                 if (Vector2.Distance(Position(), ball) < 38)
                     _ball.SetEnemyOwner(this);
+                //если мяч у вратаря он ищет ближнего для паса
+                if (Vector2.Distance(Position(), ball) < 38)
+                {
+                    _ball.SetEnemyOwner(this);
+                    GoalkeeperPass(width, height);
+                }
             }
         }
 
@@ -561,6 +618,25 @@ namespace FifaFootballGame.Models
             _currentPositionAI += dir * _speed;
 
             _currentPositionAI = ClampVector(_currentPositionAI, width, height);
+        }
+
+        //метод,позволяющий вратарю пасоваться
+        private void GoalkeeperPass(int width, int height)
+        {
+            if (_actionCooldown > 0)
+                return;
+
+            Vector2 dir = new Vector2(-1, 0);
+
+            if (Position().Y < height / 2f)
+                dir.Y = 0.35f;
+            else
+                dir.Y = -0.35f;
+
+            _ball.Shoot(dir, 6.2f);
+
+            IsControlBall = false;
+            _actionCooldown = 120;
         }
     }
 }
